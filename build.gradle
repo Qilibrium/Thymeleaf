@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina
+    compileOnly 'org.apache.tomcat:tomcat-catalina:10.1.2'
+    // https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+    implementation 'org.thymeleaf:thymeleaf:3.1.0.RELEASE'
+
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
